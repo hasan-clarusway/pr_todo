@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #330033;
+  background-image: url('https://cdn.pixabay.com/photo/2016/09/01/19/13/background-1637197_960_720.jpg');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.container {
+  width: 85vw;
+  max-width: 700px;
+  height: 80vh;
+  border-radius: 50px;
+  box-shadow: 2px 2px 20px rgba(34, 24, 24, 0.911);
+  background-color: rgb(129, 51, 165);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  font-size: 2rem;
+  color: rgb(45, 28, 78);
+  text-shadow: 3px 5px 10px rgb(114, 88, 88);
+  text-align: center;
+  padding: 1rem;
+}
+
+.todo-add {
+  width: 90%;
+  display: flex;
+  margin-top: 1rem;
+  font-size: 0.5rem;
+}
+
+.button-addition{  
+  margin-top: 7px;
+  margin-left: -40px;
+  display: flex;
+  align-items: center;
+  color: #5d20bf;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 2rem;
+  height: 3rem;
+  width: 3rem;
+  transition: filter 0.3s;
+}
+
+.button-addition:hover {
+  opacity: 0.6;
+}
+
+#todo-input {
+  height: 60px;
+  width: 90%;
+  margin-left: 20px;
+  border-color: #fff;
+  border-radius: 10px;
+  outline: none;
+  padding: 0.5rem;
+}
+
+.todos {
+  width: 80%;
+  margin-top: 2rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.todos ul {
+  list-style: none;
+}
+
+ul li {
+  background-color: #eee;
+  color: rgb(41, 41, 41);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+}
+
+ul li:nth-child(even) {
+  background: #dde6f5;
+}
+
+li i {
+  padding: 1rem;
+  color: #ea0a0a;
+  cursor: pointer;
+}
+
+li i:hover {
+  opacity: 0.3;
+}
+
+li p {
+  flex: auto;
+  padding: 0.2rem;
+  color: #1c3ac1;
+}
+
+li.checked > .fa-check {
+  color: #00e676;
+}
+
+li.checked > p {
+  color: rgb(41, 41, 41);
+  text-decoration: line-through;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 576px) {
+  li p {
+    font-size: 0.8rem;
+  }
+}
